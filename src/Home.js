@@ -3,6 +3,8 @@ import { TodoList } from "./todolist"
 
 const Home = () => {
     const [todos, setTodos] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     const handleUpdate = (id, checked) => {
         
@@ -48,15 +50,26 @@ const Home = () => {
     useEffect(() => {
         fetch('http://localhost:8000/todos')
             .then(res => {
-                return res.json()
+                if(!res.ok) {
+                    throw Error(`${res.status} | ${res.statusText}`);
+                }
+                return res.json()  
             })
             .then((data) => {
                 setTodos(data);
-            });
+                setIsLoading(false);
+                setError(null);
+            })
+            .catch(err => {
+                setIsLoading(false);
+                setError(err.message);
+            })
     }, []);
 
     return (
         <div className="home">
+            { error && <div>{ error }</div> }
+            { isLoading && <div>Loading...</div> }
             { todos && <TodoList todos={todos} title='Todo' handleUpdate={handleUpdate} /> }
         </div>
     );
