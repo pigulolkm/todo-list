@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import { TodoList } from "./todolist"
+import useFetch from "./useFetch";
 
 const Home = () => {
-    const [todos, setTodos] = useState(null);
-    const [isLoading, setIsLoading] = useState(true);
-    const [error, setError] = useState(null);
+    const {data: todos, isLoading, error} = useFetch('http://localhost:8000/todos');
 
     const handleUpdate = (id, checked) => {
         
@@ -37,34 +36,17 @@ const Home = () => {
         ); */
 
         /* ********* Method 4 */
-        setTodos(todos.map(todo => {
+        /* useFetch.setData(todos.map(todo => {
             if(id === todo.id) {
                 return { ...todo, enabled: checked }
             }
             return todo;
-        })); 
+        }));  */
         
         // TODO update the item seq to the bottom with strikethrough
     }
 
-    useEffect(() => {
-        fetch('http://localhost:8000/todos')
-            .then(res => {
-                if(!res.ok) {
-                    throw Error(`${res.status} | ${res.statusText}`);
-                }
-                return res.json()  
-            })
-            .then((data) => {
-                setTodos(data);
-                setIsLoading(false);
-                setError(null);
-            })
-            .catch(err => {
-                setIsLoading(false);
-                setError(err.message);
-            })
-    }, []);
+    
 
     return (
         <div className="home">
