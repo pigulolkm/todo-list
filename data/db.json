@@ -1,7 +1,7 @@
 {
     "todos":[
-        { "id": 1, "title": "Go home", "body": "", "enabled": true },
-        { "id": 2, "title": "Go home 2", "body": "", "enabled": false },
-        { "id": 3, "title": "Go home 3", "body": "", "enabled": false }
+        { "id": 1, "body": "Buy shampoo", "enabled": true },
+        { "id": 2, "body": "Withdraw $2000", "enabled": false },
+        { "id": 3, "body": "Buy McD take out for lunch", "enabled": false }
     ]
 }

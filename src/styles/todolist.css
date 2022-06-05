@@ -5,7 +5,8 @@
     border-bottom: 1px solid #fafafa;
 }
 .todo-preview:hover {
-    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+    background-color: rgba(60, 200, 100, 0.5);
+    cursor: pointer;
 }
 .todo-preview h2 {
     font-size: 20px;
@@ -14,3 +15,10 @@
 }
 
 /* todo preview /item */
+.todo-checkbox {
+    margin: 10px;
+}
+
+.todo-item {
+    font-size: 20px;
+}

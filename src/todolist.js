@@ -8,9 +8,9 @@ const TodoList = ({ todos, title, handleUpdate}) => {
             {
                 todos.map((todo) => {
                     return(
-                        <div className="todo-preview" key={todo.id}>
-                            <h2>{ todo.title }</h2>
-                            <input type="checkbox" checked={todo.enabled} onChange={(e) => handleUpdate(todo.id, e.target.checked)}/>
+                        <div className="todo-preview" key={todo.id} onClick={(e) => handleUpdate(todo.id, !todo.enabled)}>
+                            <input className="todo-checkbox" type="checkbox" checked={todo.enabled} onChange={(e) => handleUpdate(todo.id, e.target.checked)}/>
+                            <span className="todo-item">{ todo.body }</span>
                         </div>
                     );
                 })
