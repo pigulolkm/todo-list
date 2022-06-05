@@ -1,0 +1,7 @@
+{
+    "todos":[
+        { "id": 1, "title": "Go home", "body": "", "enabled": true },
+        { "id": 2, "title": "Go home 2", "body": "", "enabled": false },
+        { "id": 3, "title": "Go home 3", "body": "", "enabled": false }
+    ]
+}

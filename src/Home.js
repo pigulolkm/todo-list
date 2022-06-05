@@ -2,11 +2,7 @@ import { useEffect, useState } from "react";
 import { TodoList } from "./todolist"
 
 const Home = () => {
-    const [todos, setTodos] = useState([
-        { id: 1, title: 'Go home', body: '', enabled: true },
-        { id: 2, title: 'Go home 2', body: '', enabled: false },
-        { id: 3, title: 'Go home 3', body: '', enabled: false },
-    ]);
+    const [todos, setTodos] = useState(null);
 
     const handleUpdate = (id, checked) => {
         
@@ -50,14 +46,18 @@ const Home = () => {
     }
 
     useEffect(() => {
-        console.log('rendered');
-    });
+        fetch('http://localhost:8000/todos')
+            .then(res => {
+                return res.json()
+            })
+            .then((data) => {
+                setTodos(data);
+            });
+    }, []);
 
     return (
         <div className="home">
-            {
-                <TodoList todos={todos} title='Todo' handleUpdate={handleUpdate} />
-            }
+            { todos && <TodoList todos={todos} title='Todo' handleUpdate={handleUpdate} /> }
         </div>
     );
 }
