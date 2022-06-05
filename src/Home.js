@@ -2,7 +2,7 @@ import { TodoList } from "./todolist"
 import useFetch from "./useFetch";
 
 const Home = () => {
-    const {data: todos, isLoading, error} = useFetch('http://localhost:8000/todos');
+    const {data: todos, setData: setTodos, isLoading, error} = useFetch('http://localhost:8000/todos');
 
     const handleUpdate = (id, checked) => {
         
@@ -35,12 +35,12 @@ const Home = () => {
         ); */
 
         /* ********* Method 4 */
-        /* useFetch.setData(todos.map(todo => {
+        setTodos(todos.map(todo => {
             if(id === todo.id) {
                 return { ...todo, enabled: checked }
             }
             return todo;
-        }));  */
+        }));
         
         // TODO update the item seq to the bottom with strikethrough
     }
