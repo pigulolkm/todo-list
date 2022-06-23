@@ -1,4 +1,4 @@
-import { TodoList } from "./todolist"
+import { TodoList } from "./Todolist"
 import useFetch from "./useFetch";
 
 const Home = () => {
