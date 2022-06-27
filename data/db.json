@@ -1,7 +1,57 @@
 {
     "todos":[
-        { "id": 1, "body": "Buy shampoo", "enabled": true },
-        { "id": 2, "body": "Withdraw $2000", "enabled": false },
-        { "id": 3, "body": "Buy McD take out for lunch", "enabled": false }
+        { 
+            "id": 1, 
+            "type": "simple",
+            "title": "Buy shampoo", 
+            "enabled": true 
+        },
+        { 
+            "id": 2, 
+            "type": "simple",
+            "title": "Withdraw $2000", 
+            "enabled": false 
+        },
+        { 
+            "id": 3, 
+            "type":"simple",
+            "title": "Buy McD take out for lunch", 
+            "enabled": false 
+        },
+        {
+            "id": 4, 
+            "type":"list",
+            "title": "Shopping", 
+            "list" : [
+                {
+                    "id": 4.1,
+                    "type": "item",
+                    "title": "Ice-cream"
+                },
+                {
+                    "id": 4.2,
+                    "type": "item",
+                    "title": "Beer"
+                },
+                {
+                    "id": 4.3,
+                    "type": "item",
+                    "title": "Chips"
+                }
+            ],
+            "enabled": false 
+        }
+    ],
+    "blogs":[
+        {
+            "id": 1, 
+            "author": "simple",
+            "title": "Buy shampoo"
+        },
+        {
+            "id": 2, 
+            "author": "simple",
+            "title": "Buy bleach"
+        }
     ]
 }

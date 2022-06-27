@@ -1,5 +1,6 @@
 import Navbar from './Navbar';
 import Home from './Home';
+import Blog from './pages/Blog'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Create from './Create';
 import { TodoDetail } from './TodoDetails';
@@ -13,6 +14,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/create" element={<Create />} />
+            <Route path="/pages/Blog" element={<Blog />} />
             <Route path="todo/:id" element={<TodoDetail /> } />
           </Routes>
         </div>

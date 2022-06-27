@@ -2,10 +2,11 @@ import { TodoList } from "./Todolist"
 import useFetch from "./useFetch";
 
 const Home = () => {
-    const {data: todos, setData: setTodos, isLoading, error} = useFetch('http://localhost:8000/todos');
+    const {data: todos, setData: setTodos,  isLoadingTodos, errorTodos} = useFetch('http://localhost:8000/todos');
+    console.log(todos);
 
-    const handleUpdate = (id, checked) => {
-        
+    const handleUpdate = (id, checked, parentId) => {
+        console.log(id + ' ' + checked + ' ' + parentId);
         /* ********* Method 1 
         let newTodos = [...todos];
         const index = newTodos.findIndex(todo => todo.id === id);
@@ -49,8 +50,8 @@ const Home = () => {
 
     return (
         <div className="home">
-            { error && <div>{ error }</div> }
-            { isLoading && <div>Loading...</div> }
+            { errorTodos && <div>{ errorTodos }</div> }
+            { isLoadingTodos && <div>Loading...</div> }
             { todos && <TodoList todos={todos} title='Todo' handleUpdate={handleUpdate} /> }
         </div>
     );
