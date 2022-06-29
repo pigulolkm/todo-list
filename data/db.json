@@ -46,12 +46,14 @@
         {
             "id": 1, 
             "author": "simple",
-            "title": "Buy shampoo"
+            "title": "Buy shampoo",
+            "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit voluptatem quod asperiores itaque ad impedit cum enim nam esse blanditiis exercitationem, saepe, numquam nesciunt suscipit, sint voluptates dicta aliquid? Labore."
         },
         {
             "id": 2, 
             "author": "simple",
-            "title": "Buy bleach"
+            "title": "Buy bleach",
+            "body" :"Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit voluptatem quod asperiores itaque ad impedit cum enim nam esse blanditiis exercitationem, saepe, numquam nesciunt suscipit, sint voluptates dicta aliquid? Labore."
         }
     ]
 }
