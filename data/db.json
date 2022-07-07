@@ -1,59 +1,65 @@
 {
-    "todos":[
-        { 
-            "id": 1, 
-            "type": "simple",
-            "title": "Buy shampoo", 
-            "enabled": true 
-        },
-        { 
-            "id": 2, 
-            "type": "simple",
-            "title": "Withdraw $2000", 
-            "enabled": false 
-        },
-        { 
-            "id": 3, 
-            "type":"simple",
-            "title": "Buy McD take out for lunch", 
-            "enabled": false 
+  "todos": [
+    {
+      "id": 1,
+      "type": "simple",
+      "title": "Buy shampoo",
+      "enabled": true
+    },
+    {
+      "id": 2,
+      "type": "simple",
+      "title": "Withdraw $2000",
+      "enabled": false
+    },
+    {
+      "id": 3,
+      "type": "simple",
+      "title": "Buy McD take out for lunch",
+      "enabled": false
+    },
+    {
+      "id": 4,
+      "type": "list",
+      "title": "Shopping",
+      "list": [
+        {
+          "id": 4.1,
+          "type": "item",
+          "title": "Ice-cream"
         },
         {
-            "id": 4, 
-            "type":"list",
-            "title": "Shopping", 
-            "list" : [
-                {
-                    "id": 4.1,
-                    "type": "item",
-                    "title": "Ice-cream"
-                },
-                {
-                    "id": 4.2,
-                    "type": "item",
-                    "title": "Beer"
-                },
-                {
-                    "id": 4.3,
-                    "type": "item",
-                    "title": "Chips"
-                }
-            ],
-            "enabled": false 
+          "id": 4.2,
+          "type": "item",
+          "title": "Beer"
+        },
+        {
+          "id": 4.3,
+          "type": "item",
+          "title": "Chips"
         }
-    ],
-    "blogs":[
-        {
-            "id": 1, 
-            "author": "simple",
-            "title": "Buy shampoo",
-            "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit voluptatem quod asperiores itaque ad impedit cum enim nam esse blanditiis exercitationem, saepe, numquam nesciunt suscipit, sint voluptates dicta aliquid? Labore."
-        },
-        {
-            "id": 2, 
-            "author": "simple",
-            "title": "Buy bleach",
-            "body" :"Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit voluptatem quod asperiores itaque ad impedit cum enim nam esse blanditiis exercitationem, saepe, numquam nesciunt suscipit, sint voluptates dicta aliquid? Labore."
-        }
-    ]
+      ],
+      "enabled": false
+    }
+  ],
+  "blogs": [
+    {
+      "id": 1,
+      "author": "simple",
+      "title": "Buy shampoo",
+      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit voluptatem quod asperiores itaque ad impedit cum enim nam esse blanditiis exercitationem, saepe, numquam nesciunt suscipit, sint voluptates dicta aliquid? Labore."
+    },
+    {
+      "id": 2,
+      "author": "simple",
+      "title": "Buy bleach",
+      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit voluptatem quod asperiores itaque ad impedit cum enim nam esse blanditiis exercitationem, saepe, numquam nesciunt suscipit, sint voluptates dicta aliquid? Labore."
+    },
+    {
+      "title": "aaa",
+      "body": "aaa",
+      "author": "aaa",
+      "id": 3
+    }
+  ]
 }
